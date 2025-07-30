@@ -1,0 +1,68 @@
+/* 高亮代码样式 */
+.hljs {
+  color: #e9e9e9;
+  background: transparent;
+}
+
+.hljs-keyword, 
+.hljs-selector-tag, 
+.hljs-literal, 
+.hljs-doctag, 
+.hljs-title, 
+.hljs-section, 
+.hljs-type, 
+.hljs-name, 
+.hljs-strong {
+  color: #569cd6;
+  font-weight: bold;
+}
+
+.hljs-string, 
+.hljs-built_in, 
+.hljs-attr, 
+.hljs-attribute {
+  color: #ce9178;
+}
+
+.hljs-symbol, 
+.hljs-bullet, 
+.hljs-addition, 
+.hljs-variable, 
+.hljs-template-tag, 
+.hljs-template-variable {
+  color: #b5cea8;
+}
+
+.hljs-comment, 
+.hljs-quote, 
+.hljs-deletion {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.hljs-number, 
+.hljs-regexp, 
+.hljs-literal, 
+.hljs-link {
+  color: #d16969;
+}
+
+.hljs-meta {
+  color: #9cdcfe;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-tag {
+  color: #569cd6;
+}
+
+.hljs-attr {
+  color: #9cdcfe;
+}
+
+.hljs-params {
+  color: #d4d4d4;
+} 

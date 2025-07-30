@@ -1,0 +1,111 @@
+@use './variables' as *;
+
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    background-color: $bg-color;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    gap: 3rem;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.container h1 {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: $text-color;
+}
+
+.container p {
+    color: $text-color-2;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.container ul {
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.container ul p {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.container ul p:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: $primary-color;
+}
+
+.container .powered-by {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: $text-color-3;
+    line-height: 1.6;
+}
+
+.container .powered-by a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: $transition-all;
+}
+
+.container .powered-by a:hover {
+    color: $primary-hover;
+}
+
+.actions {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .right {
+        order: -1;
+    }
+
+    .right svg {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .container h1 {
+        font-size: 1.75rem;
+    }
+}

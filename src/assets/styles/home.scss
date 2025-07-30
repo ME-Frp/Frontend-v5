@@ -1,0 +1,305 @@
+@use './variables' as *;
+
+.home-container {
+  min-height: 100vh;
+  background: $bg-color;
+}
+
+// Hero 区域
+.hero-section {
+  position: relative;
+  padding: 120px 24px;
+  background: linear-gradient(to bottom,
+    rgba($primary-color, 0.08) 0%,
+    rgba($primary-color, 0.08) 70%,
+    rgba($primary-color, 0) 100%
+  );
+  text-align: center;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin: 0;
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: $text-color-2;
+  margin: 24px 0 0px;
+}
+
+.thirdtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: $text-color-2;
+  margin: 10px 0 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .start-button, .docs-button {
+    padding: 0 clamp(24px, 4vw, 40px);
+    height: 48px;
+    font-size: 1.1rem;
+  }
+}
+
+// 统计区域
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 3vw, 32px);
+  max-width: 1200px;
+  margin: -60px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-item {
+  background: $bg-color;
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: $box-shadow;
+  transition: $transition-all;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat-number {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    :deep(.n-number-animation) {
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+  }
+
+  .stat-label {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: $text-color-2;
+  }
+}
+
+// 特性区域
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 80px 0 48px;
+  color: $text-color;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(24px, 3vw, 32px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.feature-card {
+  background: $bg-color;
+  padding: clamp(24px, 3vw, 32px);
+  border-radius: 16px;
+  text-align: center;
+  transition: $transition-all;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+      rgba($primary-color, 0.1), 
+      rgba($primary-hover, 0.1)
+    );
+    border-radius: 16px;
+    color: $primary-color;
+  }
+
+  .feature-title {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-weight: 600;
+    margin: 0 0 16px;
+    color: $text-color;
+  }
+
+  .feature-desc {
+    color: $text-color-2;
+    margin: 0;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+}
+
+// 场景区域
+.scenarios-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(24px, 3vw, 32px);
+}
+
+.scenario-card {
+  background: $bg-color;
+  border-radius: 16px;
+  padding: clamp(24px, 3vw, 32px);
+  text-align: center;
+  transition: $transition-all;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .scenario-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+      rgba($primary-color, 0.05), 
+      rgba($primary-color, 0.08)
+    );
+    border-radius: 24px;
+    color: $primary-color;
+  }
+
+  .scenario-content {
+    h3 {
+      margin: 0 0 12px;
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
+      color: $text-color;
+    }
+
+    p {
+      margin: 0;
+      color: $text-color-2;
+      line-height: 1.6;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+  }
+}
+
+// CTA 区域
+.cta-section {
+  text-align: center;
+  padding: clamp(80px, 10vw, 120px) 24px;
+  margin-top: clamp(60px, 8vw, 80px);
+  background: linear-gradient(135deg, 
+    rgba($bg-color, 0.05), 
+    rgba($bg-color, 0.08)
+  );
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: $text-color;
+  }
+
+  p {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    color: $text-color-2;
+    margin: 0 0 32px;
+  }
+
+  .n-button {
+    padding: 0 clamp(32px, 5vw, 48px);
+    height: 48px;
+    font-size: 1.1rem;
+  }
+}
+
+// 移动端优化
+@media (max-width: 768px) {
+  .stats-section {
+    margin-top: -30px;
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 16px;
+    
+    .stat-item {
+      padding: 20px;
+      
+      .stat-number {
+        font-size: 2rem;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    padding: 0 16px;
+    
+    .start-button, .docs-button {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 60px 16px;
+  }
+
+  .stats-section {
+    margin-top: -20px;
+    padding: 0 16px;
+  }
+}
