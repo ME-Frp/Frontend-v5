@@ -22,8 +22,7 @@
                         返回首页
                     </n-button>
                 </div>
-                <p class="powered-by">由 <a target="_blank" href="https://www.menetx.com/">幻缘网络</a> 与 <a target="_blank"
-                        href="http://www.blbilink.com/">波比网络</a> 提供支持</p>
+                <p class="powered-by">由 <a target="_blank" href="https://www.menetx.com/">神人网络</a>提供支持</p>
             </div>
             <div class="right">
                 <svg width="414" height="212" viewBox="0 0 414 212" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +189,7 @@ export default {
         HomeOutline
     },
     metaInfo: {
-        title: '页面未找到 | 幻缘映射',
+        title: '页面未找到 | 神人映射',
         link: [
             { rel: 'icon', href: 'https://drive.mcsl.com.cn/d/ME-Frp/Local/Others/logo.svg' }
         ]
