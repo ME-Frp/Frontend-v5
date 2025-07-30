@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { mock } from '../constants/mock'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -24,7 +25,7 @@ const router = createRouter({
 })
 
 router.beforeEach((_to, _from) => {
-  document.title = 'ME Frp | 幻缘映射 - 免费内网穿透_免费端口映射_半公益_高速_Minecraft我的世界联机_泰拉瑞亚联机_远程桌面_开发调试_建站'
+  document.title = `${mock.title} | ${mock.subtitle}`
 
 
   if (!window.$loadingBar) return true

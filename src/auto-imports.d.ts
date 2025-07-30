@@ -83,9 +83,6 @@ declare global {
   // @ts-ignore
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
-  // @ts-ignore
-  export type { VaptchaInstance, VaptchaServerToken, VaptchaConfig } from './composables/useVaptcha'
-  import('./composables/useVaptcha')
 }
 
 // for vue template auto import
@@ -159,7 +156,6 @@ declare module 'vue' {
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useThemeVars: UnwrapRef<typeof import('naive-ui')['useThemeVars']>
-    readonly useVaptcha: UnwrapRef<typeof import('./composables/useVaptcha')['useVaptcha']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>

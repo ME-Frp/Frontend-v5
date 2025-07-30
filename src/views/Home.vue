@@ -4,9 +4,9 @@
     <!-- 主标题区域 -->
     <div class="hero-section">
       <div class="hero-content">
-        <h1 class="main-title">ME Frp 幻缘映射</h1>
-        <p class="subtitle">免费 · 公益 · 好用 · 低延迟 · 稳定的内网穿透服务</p>
-        <p class="thirdtitle">五年技术沉淀 · 稳定可靠</p>
+        <h1 class="main-title">{{ mock.title }}</h1>
+        <p class="subtitle"> {{ mock.subtitle }} </p>
+        <p class="thirdtitle"> {{ mock.thirdtitle }} </p>
         <div class="hero-buttons">
           <NButton type="primary" size="large" class="start-button" @click="router.push('/auth/login')">
             开始使用
@@ -133,6 +133,7 @@ import {
   WifiOutline
 } from '@vicons/ionicons5'
 import { getExemptedTheme } from '../constants/theme'
+import { mock } from '../constants/mock'
 
 export interface Statistics {
   users: number
@@ -217,12 +218,7 @@ const stats = ref<Stats>({
 
 onMounted(async () => {
   try {
-    const data = {
-      users: 100,
-      nodes: 100,
-      proxies: 100,
-      traffic: 100
-    }
+    const data = mock.stats
     const traffic = formatTraffic(data.traffic)
     nextTick(() => {
       stats.value = {

@@ -5,7 +5,7 @@
       <div class="navbar-content">
         <div class="logo">
           <RouterLink to="/" class="logo-link" aria-label="返回首页">
-            <h2>ME Frp 幻缘映射</h2>
+            <h2>{{ mock.title }}</h2>
           </RouterLink>
         </div>
 
@@ -52,7 +52,7 @@
         </NPopover>
         <div class="logo">
           <RouterLink to="/" class="logo-link" aria-label="返回首页">
-            <h2>ME Frp 幻缘映射</h2>
+            <h2>{{ mock.title }}</h2>
           </RouterLink>
         </div>
       </div>
@@ -75,6 +75,7 @@ import {
   DocumentLockOutline
 } from '@vicons/ionicons5'
 import { exemptedSwc, getExemptedTheme } from '../constants/theme'
+import { mock } from '../constants/mock'
 
 const showMenu = ref(false)
 const router = useRouter()
