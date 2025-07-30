@@ -3,7 +3,7 @@
         <div class="content">
             <div class="left">
                 <h1>⚠ 404 - 页面未找到</h1>
-                <p>您可能导航到了错误的地方。</p>
+                <p>本站点仅供娱乐。请支持 <a href="https://mefrp.com" target="_blank">幻缘映射</a> 和 香香落雪 谢谢喵。</p>
                 <div class="actions">
                     <n-button type="primary" @click="goBack">
                         <template #icon>
