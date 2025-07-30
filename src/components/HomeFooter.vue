@@ -12,8 +12,6 @@
           </div>
         </div>
         <p>Copyright © Kami Frp 项目组 2025.</p>
-        <p><a href="https://内网穿透.中国/">内网穿透联盟统一识别编码: 114514HOMO</a></p>
-
       </div>
       <div class="footer-right">
         <a href="/policy?tab=terms">服务协定</a>
